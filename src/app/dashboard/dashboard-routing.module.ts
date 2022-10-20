@@ -10,14 +10,15 @@ const routes: Routes = [
     component: DashboardComponent,
     children: [
       {
-        path: 'matches', component: MatchesListComponent
-      }
-    ]
+        path: 'matches',
+        component: MatchesListComponent,
+      },
+    ],
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class DashboardRoutingModule { }
+export class DashboardRoutingModule {}
