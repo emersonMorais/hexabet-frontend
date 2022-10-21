@@ -1,12 +1,10 @@
-import { RouterModule } from '@angular/router';
-import { MatchesListComponent } from './matches-list/matches-list.component';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { MatchCardComponent } from './match-card/match-card.component';
+import { MatchesListComponent } from './matches-list/matches-list.component';
 
 @NgModule({
-  declarations: [MatchesListComponent],
-  imports: [
-    CommonModule
-  ],
+  declarations: [MatchesListComponent, MatchCardComponent],
+  imports: [CommonModule],
 })
-export class MatchesModule { }
+export class MatchesModule {}
