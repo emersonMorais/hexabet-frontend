@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+a {
+  text-decoration: none !important;
+}
+
+body {
+
+}
+
+.bg-violet {
+  background-color: rgb(153, 18, 65);
+}
+
+.bg-violet-400 {
+  background-color: rgb(236, 41, 109);
+}
+
+

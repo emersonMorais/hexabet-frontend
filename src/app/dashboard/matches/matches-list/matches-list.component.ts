@@ -1,7 +1,7 @@
 import { MatchesService } from './matches.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Match } from './matches.interface';
+import { Match } from './match.interface';
 
 @Component({
   selector: 'hb-matches-list',

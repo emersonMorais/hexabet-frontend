@@ -1,4 +1,4 @@
-import { Match } from './matches.interface';
+import { Match } from './match.interface';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 

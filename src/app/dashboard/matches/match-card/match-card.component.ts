@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Match } from '../matches-list/matches.interface';
+import { Match } from '../matches-list/match.interface';
 
 @Component({
   selector: 'hb-match-card',
