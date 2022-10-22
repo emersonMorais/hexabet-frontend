@@ -8,11 +8,20 @@ body {
 }
 
 .bg-violet {
-  background-color: rgb(153, 18, 65);
+  background-color: rgb(4, 124, 63);
 }
 
 .bg-violet-400 {
-  background-color: rgb(236, 41, 109);
+
+  border: solid 0.3px #e5d36a;
+  width: 200px;
+  text-align: center;
+  border-radius: 12px;
+
 }
 
+.bg-violet-400:hover {
+  font-weight: bold !important;
+  background-color: #0e5f25;
 
+}
