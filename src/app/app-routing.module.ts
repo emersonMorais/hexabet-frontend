@@ -1,3 +1,4 @@
+import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { MatchesListComponent } from './dashboard/matches/matches-list/matches-list.component';
 import { NgModule } from '@angular/core';
@@ -9,6 +10,10 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
+  },
+  {
+    path: 'user/:username',
+    component: DashboardComponent
   },
   {
     path:'matches',
