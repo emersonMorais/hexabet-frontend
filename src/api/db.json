@@ -15,38 +15,5 @@
       "team1": "Cat",
       "team2": "Equ"
     }
-  ],
-  "users": [
-    {
-      "id": 1,
-      "userName": "Jose",
-      "password": "123"
-    },
-    {
-      "userName": "Jose",
-      "id": 2
-    },
-    {
-      "userName": "Jose2",
-      "id": 3
-    },
-    {
-      "userName": "Jose2",
-      "id": 4
-    },
-    {
-      "userName": "Jose2",
-      "id": 5
-    },
-    {
-      "userName": "",
-      "password": "",
-      "id": 6
-    },
-    {
-      "userName": "",
-      "password": "",
-      "id": 7
-    }
   ]
 }
