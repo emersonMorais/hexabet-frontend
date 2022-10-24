@@ -9,9 +9,9 @@ import { Route, Router, Routes } from '@angular/router';
   styleUrls: ['./signin.component.css'],
 })
 export class SigninComponent implements OnInit {
-
   loginForm!: FormGroup;
-  @ViewChild('userNameInputFocus') userNameInputFocus!: ElementRef<HTMLInputElement>;
+  @ViewChild('userNameInputFocus')
+  userNameInputFocus!: ElementRef<HTMLInputElement>;
 
   constructor(
     private formBuilder: FormBuilder,
