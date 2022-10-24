@@ -5,16 +5,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
-    pathMatch: 'full',
-    component: DashboardComponent,
-    children: [
-      {
-        path: 'matches',
-        component: MatchesListComponent,
-      },
-    ],
+    path: '', pathMatch: 'full',component: DashboardComponent,
   },
+  
+
 ];
 
 @NgModule({
