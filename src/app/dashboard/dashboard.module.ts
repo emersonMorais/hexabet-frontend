@@ -7,11 +7,8 @@ import { MatchesModule } from './matches/matches.module';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
-
 @NgModule({
-  declarations: [
-    DashboardComponent
-  ],
+  declarations: [DashboardComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -19,5 +16,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DashboardHeaderModule,
     MatchesModule,
   ],
+  exports: [DashboardHeaderModule, MatchesModule],
 })
-export class DashboardModule { }
+export class DashboardModule {}

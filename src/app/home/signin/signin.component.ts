@@ -1,7 +1,7 @@
 import { AuthService } from './../../core/auth.service';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Route, Router, Routes } from '@angular/router';
+import { Router } from '@angular/router';
 import { of } from 'rxjs';
 
 @Component({

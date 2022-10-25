@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { User } from 'src/app/core/user/user.interface';
+import { UserService } from 'src/app/core/user/user.service';
 
 @Component({
   selector: 'hb-dashboard-header',
@@ -6,5 +9,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard-component.css']
 })
 export class DashboardHeaderComponent {
-  constructor(){}
+
+  user$: Observable<User>
+  user!: User
+
+  constructor(userService: UserService){
+    this.user$ = userService.getUser();
+    this.user$.subscribe(user => this.user = user);
+  }
+
+
 }
