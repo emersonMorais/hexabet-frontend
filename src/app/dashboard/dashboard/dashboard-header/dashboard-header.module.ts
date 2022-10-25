@@ -1,6 +1,3 @@
-import { DashboardComponent } from './../dashboard.component';
-import { MatchesModule } from './../../matches/matches.module';
-import { MatchCardComponent } from './../../matches/match-card/match-card.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
