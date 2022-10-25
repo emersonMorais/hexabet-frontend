@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from 'src/app/core/user/user.interface';
-import { UserService } from 'src/app/core/user/user.service';
+import { UserService } from '../../../core/user/auth/user.service';
 
 @Component({
   selector: 'hb-dashboard-header',

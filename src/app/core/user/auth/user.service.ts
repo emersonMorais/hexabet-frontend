@@ -3,8 +3,8 @@ import jwt_decode from 'jwt-decode';
 import { BehaviorSubject } from 'rxjs';
 import { __values } from 'tslib';
 
-import { TokenService } from './../token.service';
-import { User } from './user.interface';
+import { TokenService } from './token.service';
+import { User } from '../user.interface';
 
 
 @Injectable({

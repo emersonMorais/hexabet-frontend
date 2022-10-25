@@ -1,4 +1,4 @@
-import { AuthService } from './../../core/auth.service';
+import { AuthService } from '../../core/user/auth/auth.service';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -35,7 +35,7 @@ export class SigninComponent implements OnInit {
     of([
       this.authService.userAuthenticate(userName, password).subscribe({
         next: () => this.router.navigate(['user', userName]),
-        error: (e) => alert('Usuário inexistente'),
+        error: () => alert('Usuário inexistente'),
       }),
     ]);
     this.loginForm.reset();
