@@ -6,12 +6,15 @@ import { __values } from 'tslib';
 import { TokenService } from './token.service';
 import { User } from '../user.interface';
 
-
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
-  private userSubject = new BehaviorSubject<User>({id: 0, name:'', email:''});
+  private userSubject = new BehaviorSubject<User>({
+    id: 0,
+    name: '',
+    email: '',
+  });
   private userName!: string;
 
   constructor(private tokenService: TokenService) {
@@ -29,6 +32,11 @@ export class UserService {
 
   getUserName() {
     return this.userName;
+  }
+
+  logout() {
+    this.tokenService.removeToken();
+    this.userSubject.next({ id: 0, name: '', email: '' });
   }
 
   isLogged() {

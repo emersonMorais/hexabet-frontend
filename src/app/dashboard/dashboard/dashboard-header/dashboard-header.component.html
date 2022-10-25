@@ -1,9 +1,11 @@
-<header class="bg-violet" *ngIf="user.name">
+<header class="bg-violet" *ngIf="user$ | async as user">
   <nav class="d-flex justify-content-around align-items-center flex-wrap">
     <a class="navbar-brand text-white">HexaBet</a>
     <ul class="nav justify-content-center">
-      <li class="nav-item ">
-        <a class="nav-link active text-white" routerLink="/dashboard">Dashboard</a>
+      <li class="nav-item">
+        <a class="nav-link active text-white" routerLink="/dashboard"
+          >Dashboard</a
+        >
       </li>
       <li class="nav-item">
         <a class="nav-link text-white" routerLink="/matches">Jogos</a>
@@ -11,7 +13,7 @@
       <li class="nav-item">
         <a class="nav-link text-white" routerLink="/table">Tabela</a>
       </li>
-      <li class="nav-item ">
+      <li class="nav-item">
         <a class="nav-link text-white" routerLink="/teams">Seleções</a>
       </li>
       <li class="nav-item">
@@ -19,9 +21,10 @@
       </li>
     </ul>
 
-      <div >
-        <i class="fa fa-user-circle text-white m-2"></i>
-        <a class="text-white ">{{ user.name }}</a>
-      </div>
+    <div class="d-flex align-items-center gap-2" >
+      <i class="fa fa-user-circle text-white"></i>
+      <a class="text-white">{{ user.name }}</a>
+      <a (click)="logout()" class="text-white-50">Sair</a>
+    </div>
   </nav>
 </header>

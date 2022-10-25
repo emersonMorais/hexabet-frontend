@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from 'src/app/core/user/user.interface';
@@ -11,11 +12,15 @@ import { UserService } from '../../../core/user/auth/user.service';
 export class DashboardHeaderComponent {
 
   user$: Observable<User>
-  user!: User
 
-  constructor(userService: UserService){
+
+  constructor( private userService: UserService, private router: Router){
     this.user$ = userService.getUser();
-    this.user$.subscribe(user => this.user = user);
+  }
+
+  logout() {
+    this.userService.logout();
+    this.router.navigate(['home']);
   }
 
 
