@@ -2,6 +2,7 @@ import { AuthService } from './../../core/auth.service';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Route, Router, Routes } from '@angular/router';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'hb-signin',
@@ -31,13 +32,13 @@ export class SigninComponent implements OnInit {
     const userName = this.loginForm.get('userName')?.value;
     const password = this.loginForm.get('password')?.value;
 
-    this.authService.userAuthenticate(userName, password).subscribe(
-      () => this.router.navigate(['user', userName]),
-      (err) => {
-        alert('usuario inexistente');
-        this.loginForm.reset();
-        this.userNameInputFocus.nativeElement.focus();
-      }
-    );
+    of([
+      this.authService.userAuthenticate(userName, password).subscribe({
+        next: () => this.router.navigate(['user', userName]),
+        error: (e) => alert('Usuário inexistente'),
+      }),
+    ]);
+    this.loginForm.reset();
+    this.userNameInputFocus.nativeElement.focus();
   }
 }
