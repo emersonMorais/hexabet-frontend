@@ -35,7 +35,6 @@ export class SigninComponent implements OnInit {
     of([
       this.authService.userAuthenticate(userName, password).subscribe({
         next: () => this.router.navigate(['user', userName]),
-        error: () => alert('Usuário inexistente'),
       }),
     ]);
     this.loginForm.reset();

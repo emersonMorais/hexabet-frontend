@@ -7,7 +7,7 @@ import { UserService } from '../../../core/user/auth/user.service';
 @Component({
   selector: 'hb-dashboard-header',
   templateUrl: './dashboard-header.component.html',
-  styleUrls: ['./dashboard-component.css']
+  styleUrls: ['./dashboard-header-component.css']
 })
 export class DashboardHeaderComponent {
 
