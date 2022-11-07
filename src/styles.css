@@ -1,27 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
-a {
+a{
   text-decoration: none !important;
 }
 
-body {
-
+li {
+  list-style: none;
 }
 
-.bg-violet {
-  background-color: rgb(4, 124, 63);
+
+.bg-green-dark {
+  background-color: #091D12
 }
 
-.bg-violet-400 {
-
-  border: solid 0.3px #e5d36a;
-  width: 200px;
-  text-align: center;
-  border-radius: 12px;
-
+.bg-green-600 {
+  background-color: #114b2e;
 }
 
-.bg-violet-400:hover {
-  font-weight: bold !important;
-  background-color: #0e5f25;
+.bg-green-500 {
+  background-color: #13291d;
+}
 
+.bg-green-300 {
+  background-color: #047C3F ;
+}
+
+
+.bg-blue-500 {
+  background-color: #1F235B ;
+}
+
+.bg-blue-400 {
+  background-color: #373D98;
+}
+
+
+.bg-yellow-500 {
+  background-color: #E2C82E;
 }

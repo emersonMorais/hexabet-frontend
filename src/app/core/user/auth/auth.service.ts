@@ -14,7 +14,7 @@ export class AuthService {
   userAuthenticate(userName: string, password: string) {
     return this.http
       .post(
-        `${environment.urlAPI}/user/login`,
+        `${environment.urlAPI}/oauth/token`,
         { userName, password },
         { observe: 'response' }
       )
