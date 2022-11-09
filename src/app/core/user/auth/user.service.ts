@@ -12,10 +12,12 @@ import { User } from '../user.interface';
 export class UserService {
   private userSubject = new BehaviorSubject<User>({
     id: 0,
-    name: '',
+    firstName: '',
     email: '',
   });
   private userName!: string;
+
+  private firstName!: string;
 
   constructor(private tokenService: TokenService) {
     this.tokenService.hasToken() && this.decodeAndNotify();
@@ -30,13 +32,17 @@ export class UserService {
     return this.userSubject.asObservable();
   }
 
+  getFirstName() {
+    return this.getFirstName;
+  }
+
   getUserName() {
     return this.userName;
   }
 
   logout() {
     this.tokenService.removeToken();
-    this.userSubject.next({ id: 0, name: '', email: '' });
+    this.userSubject.next({ id: 0, firstName: '', email: '' });
   }
 
   isLogged() {
@@ -46,7 +52,9 @@ export class UserService {
   private decodeAndNotify() {
     const token = this.tokenService.getToken();
     const payloadUser = jwt_decode(token) as User;
-    this.userName = payloadUser.name;
+    this.userName = payloadUser.firstName;
+    console.log(token);
+
     this.userSubject.next(payloadUser);
   }
 }

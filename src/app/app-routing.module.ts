@@ -16,7 +16,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'user/:username',
+    path: 'user/:userName',
     component: DashboardComponent
   },
   {
