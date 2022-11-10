@@ -1,6 +1,6 @@
 import { MatchesService } from './matches.service';
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Match } from './match.interface';
 
 @Component({
@@ -17,5 +17,8 @@ export class MatchesListComponent implements OnInit {
     this.matchesService
       .findAllMatches()
       .subscribe((match) => (this.matches = match));
+
+      console.log(this.matches[0].firstTeam);
+
   }
 }

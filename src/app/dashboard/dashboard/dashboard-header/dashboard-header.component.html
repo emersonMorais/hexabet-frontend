@@ -1,7 +1,7 @@
-<header class="bg-green-300">
-  <nav class="d-flex justify-content-around align-items-center flex-wrap">
-    <a class="navbar-brand text-white">HexaBet</a>
-    <ul class="nav justify-content-center">
+<header class="bg-green-600">
+
+  <nav class="nav navbar d-md-flex justify-content-md-around align-items-md-center">
+    <ul class="d-flex flex-wrap">
       <li class="nav-item">
         <a class="nav-link active text-white" routerLink="/dashboard"
           >Dashboard</a
@@ -11,20 +11,12 @@
         <a class="nav-link text-white" routerLink="/matches">Jogos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" routerLink="/table">Tabela</a>
+        <a class="nav-link text-white d-none d-md-block" routerLink="/teams">Seleções</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" routerLink="/teams">Seleções</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" routerLink="/ranking">Ranking</a>
+        <a class="nav-link text-white " routerLink="/ranking">Ranking</a>
       </li>
     </ul>
-
-    <div class="d-flex align-items-center gap-2" >
-      <i class="fa fa-user-circle text-white"></i>
-      <a class="text-white"></a>
-      <a (click)="logout()" class="text-white-50">Sair</a>
-    </div>
+    <a (click)="logout()" class="text-white-50 d-none d-md-block">Sair</a>
   </nav>
 </header>

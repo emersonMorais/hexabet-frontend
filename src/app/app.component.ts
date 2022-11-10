@@ -13,9 +13,11 @@ export class AppComponent {
   title = 'HexaBet';
 
   user$: Observable<User>
+  isLogged: Boolean
 
   constructor(userService: UserService){
     this.user$ = userService.getUser();
+    this.isLogged = userService.isLogged();
   }
 
 

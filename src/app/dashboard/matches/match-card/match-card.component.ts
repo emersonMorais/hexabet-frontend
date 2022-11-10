@@ -7,8 +7,7 @@ import { Match } from '../matches-list/match.interface';
   styleUrls: ['./match-card.component.css'],
 })
 export class MatchCardComponent {
-  @Input() team1 = '';
-  @Input() team2 = '';
+
 
   constructor() {}
 }

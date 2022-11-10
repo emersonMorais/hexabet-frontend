@@ -1,5 +1,8 @@
 export interface Match {
-  id: number,
-  team1: string,
-  team2: string
+  id: number;
+  result: string;
+  date: Date;
+  firstTeam: {};
+  secondTeam: {};
+  isActive: boolean;
 }
