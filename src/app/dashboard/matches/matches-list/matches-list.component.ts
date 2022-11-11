@@ -11,13 +11,16 @@ import { Match } from './match.interface';
 export class MatchesListComponent implements OnInit {
   matches: Match[] = [];
 
-
   constructor(private matchesService: MatchesService) {}
 
   ngOnInit(): void {
     this.matchesService
       .findAllMatches()
-      .subscribe((match:Match[]) => match.forEach((matchh)=> this.matches.push(matchh)));
-      console.log(this.matches);
+      .subscribe((match: Match[]) =>
+        match.forEach((matchh) => this.matches.push(matchh)
+        )
+    
+      );
+    console.log(this.matches);
   }
 }

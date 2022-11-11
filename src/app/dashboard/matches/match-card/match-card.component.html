@@ -28,14 +28,18 @@
       </div>
 
       <div class="d-flex gap-2">
-        <input type="checkbox" value="time1" />
-        <input type="checkbox" value="time2" />
-        <input type="checkbox" value="time3" />
-      </div>
+        <button (click)="fazerAposta('TEAM1', match.id)" class="bet-button">
+          {{ match.firstTeam.countryName }}
+        </button>
 
-      <button class="btn btn-success w-auto" type="submit">
-        Confirmar Aposta
-      </button>
+        <button (click)="fazerAposta('DRAW', match.id)" class="bet-button">
+          Empate
+        </button>
+
+        <button (click)="fazerAposta('TEAM2', match.id)" class="bet-button">
+          {{ match.secondTeam.countryName }}
+        </button>
+      </div>
     </div>
   </div>
 </div>

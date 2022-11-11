@@ -1,0 +1,9 @@
+.bet-button {
+  border-radius: 0.2rem;
+  border: 1px solid #047C3F ;
+  background-color: rgb(144, 248, 248);
+}
+
+.bet-button:hover {
+  background-color: rgb(110, 232, 232);
+}

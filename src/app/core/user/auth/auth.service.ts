@@ -15,7 +15,7 @@ const API = 'http://localhost:8080'
 export class AuthService {
   constructor(private http: HttpClient, private userService: UserService) {}
 
-  //realizar a requisição
+
   userAuthenticate(userName: string, password: string):Observable<AuthToken> {
 
     let token_endpoint = `${API}/oauth/token`;
